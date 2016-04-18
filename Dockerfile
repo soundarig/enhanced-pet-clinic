@@ -3,7 +3,7 @@ FROM tutum/tomcat
 RUN rm -rf /tomcat/webapps/*
 
 # Set workdir  petclinic
-WORKDIR /var/jenkins/workspace/build_dev/src
+WORKDIR /build_dev
 
 EXPOSE 5000
 CMD [mvn spring-boot:run]
