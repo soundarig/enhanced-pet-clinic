@@ -1,9 +1,10 @@
-FROM tutum/tomcat
+FROM tomcat
 
 RUN rm -rf /tomcat/webapps/*
 
 # Set workdir  petclinic
-WORKDIR /build_dev
+WORKDIR /spring-boot-petclinic
 
-EXPOSE 5000
+EXPOSE 9090
+
 CMD [mvn spring-boot:run]
